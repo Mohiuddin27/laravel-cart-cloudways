@@ -19,5 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','App\Http\Controllers\PagesController@index')->name('home');
 Route::get('/shop','App\Http\Controllers\ProductController@index')->name('shop');
-Route::get('/shop/{id}','App\Http\Controllers\PagesController@show')->name('product');
+Route::get('/shop/{id}','App\Http\Controllers\ProductController@show')->name('product');
 Route::get('/cart','App\Http\Controllers\CartController@cart')->name('cart');
+Route::get('/add-to-cart/{id}','App\Http\Controllers\CartController@addToCart')->name('add.to.cart');
+Route::get('/delete-from-cart/{id}','App\Http\Controllers\CartController@delete')->name('delete.from.cart');
